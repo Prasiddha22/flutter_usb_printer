@@ -59,7 +59,7 @@ class FlutterUsbPrinter {
   }
 
   /// [write]
-  /// write data byte
+  /// write data byte to the printer
   Future<bool?> write(Uint8List data) async {
     Map<String, dynamic> params = {"data": data};
     final bool? result = await _channel.invokeMethod('write', params);
